@@ -66,3 +66,18 @@ body {
     width: 75%;
     font-size: 1.2rem;
 }
+
+footer {
+  margin: auto;
+  color:antiquewhite;
+  font-size: 0.9rem;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+a:hover{
+  color:#629a00;
+}
