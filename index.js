@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3030;
 const bodyParser = require("body-parser");
 const fs = require('fs');
 const app = express();
-
+const date = new Date().getFullYear();
 
 // set the app
 app.set("view engine", "ejs");
@@ -18,7 +18,7 @@ app.get("/", function(req, res){
     words_length = 11;
     words = "";
     // render the template, and paste variables into it
-    res.render('list', {anagrams: words, words_length, words_input});
+    res.render('list', {anagrams: words, words_length, words_input, date});
 });
 
 // set the post method
@@ -29,7 +29,7 @@ app.post("/", function(req, res){
     let letters = words_input.split("");
     let words = search_engine(letters, words_length);
     // render the template, and paste variables into it
-    res.render('list', {anagrams: words, words_length, words_input})
+    res.render('list', {anagrams: words, words_length, words_input, date})
 })
 
 // anagram search function
