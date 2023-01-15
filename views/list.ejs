@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- import style and fonts -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,700&family=Rubik:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-style">
+        <div class="form-style-heading">
+            <h1>Anagramma-kereső</h1></div>
+        <form action="/" method="post">
+            <!-- paste the characters into the input field from the previous input -->
+        <label for="field1"><span>Gépeld be a karaktereket:</span><input id="words_input" type="text" class="input-field" name="field1" value="<%= words_input %>" /></label><br>
+            <!-- paste the length of the words from the previous input -->
+        <label for="field4"><span>Szavak hosszúsága:</span><select id="some_selector" name="field4" class="select-field" value="<%= words_length %>">
+        </select></label><br>
+        <input class="btn" id="submit-button" type="submit" value="Keresés" /><br>
+        <!-- paste the results into this textarea field -->
+        <label for="field5"><span>Eredmények:</span><br><textarea id="wrap" wrap="soft" name="field5" class="textarea-field"><%= anagrams %></textarea></label>
+        </form>
+        </div>
+    
+</body>
+<!-- import jquery and javascript function to populate selectfield -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript" src="/js/populate.js"></script>
+</html>
