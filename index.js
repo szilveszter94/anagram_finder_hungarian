@@ -47,6 +47,7 @@ function search_engine(letters, length){
         // convert the words line to lowercase
         lowercase_word = arr[line].toLowerCase();
         // loop through the word and compare with the user input
+        if (char_arr.includes(lowercase_word[0])){
         for (char in lowercase_word){
             if (char_arr.includes(lowercase_word[char])){
                 count ++;
@@ -60,6 +61,7 @@ function search_engine(letters, length){
         if (count > length - 1) {
             words.push(' ' + lowercase_word); 
         }
+    }
     }
     words.sort()
     if (words.length > 0) {
